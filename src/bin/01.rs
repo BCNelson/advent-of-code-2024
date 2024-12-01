@@ -49,26 +49,24 @@ pub fn part_two(input: &str) -> Option<u32> {
     let (list1, list2) = parse_input(input);
     let mut map: HashMap<i32, u32> = HashMap::new();
 
-    for i in 0..list2.len() {
-        let item = list2[i];
+    for item in &list2 {
         // if the item is not in the map, add it
         match map.get_mut(&item) {
             Some(count) => {
                 *count += 1;
             }
             None => {
-                map.insert(item, 1);
+                map.insert(*item, 1);
             }
         }
     }
 
     let mut sum: u32 = 0;
-    for i in 0..list1.len() {
-        let item = list1[i];
+    for item in &list1 {
         // if the item is not in the map, add it
         match map.get(&item) {
             Some(count) => {
-                sum += (item as u32) * count;
+                sum += (*item as u32) * count;
             }
             None => {
                 sum += 0;
