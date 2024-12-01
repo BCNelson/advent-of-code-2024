@@ -10,8 +10,8 @@ download *args:
 read:
     cargo run --quiet --release -- read
 
-solve:
-    cargo run --quiet --release -- solve
+solve *args:
+    cargo run --quiet --release -- solve {{args}}
 
 all:
     cargo run --quiet --release -- all
