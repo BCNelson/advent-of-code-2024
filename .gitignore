@@ -28,3 +28,9 @@ dhat-heap.json
 # Benchmarks
 
 data/timings.json
+
+# direnv
+.direnv
+
+# Advent of Code CLI
+adventofcode.session
