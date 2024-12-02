@@ -1,5 +1,7 @@
 advent_of_code::solution!(%DAY_NUMBER%);
 
+fn parse_input(input: &str) -> void {}
+
 pub fn part_one(input: &str) -> Option<u32> {
     None
 }
